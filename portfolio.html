@@ -65,13 +65,177 @@
         </button>
       </div>
     </aside>
-    <center>
-      <h1>
-        <font color="#990000"
-          >Under Construction, this page will service as my portfolio page
-          pending final designs</font
-        >
-      </h1>
-    </center>
+
+    <main class="content portfolio-page">
+      <header class="portfolio-header">
+        <h1>Technical Portfolio</h1>
+        <p>
+          A selection of projects I've completed or plan to build. Each entry
+          includes a brief overview, status, skills, and links.
+        </p>
+
+        <div class="filters" role="tablist" aria-label="Portfolio filters">
+          <button
+            class="filter-btn active"
+            data-filter="all"
+            role="tab"
+            aria-selected="true"
+          >
+            All
+          </button>
+          <button class="filter-btn" data-filter="completed" role="tab">
+            Completed
+          </button>
+          <button class="filter-btn" data-filter="in-progress" role="tab">
+            In&nbsp;Progress
+          </button>
+          <button class="filter-btn" data-filter="planned" role="tab">
+            Planned
+          </button>
+        </div>
+      </header>
+
+      <section class="project-list" id="projectList">
+        <!-- Card -->
+        <article class="pcard" data-status="completed">
+          <div class="rail"></div>
+          <header class="phead">
+            <h2 class="ptitle">Modular Data Sync Engine</h2>
+            <span class="badge completed">Completed</span>
+          </header>
+
+          <p class="pdesc">
+            A connector-agnostic synchronization engine designed to move
+            structured data reliably across heterogeneous systems. Built around
+            a modular interface and mapping layer, it allows new integrations to
+            be added without changes to the core. Emphasizes scalability,
+            reliability, and operational clarity in real-world conditions.
+          </p>
+
+          <ul class="chips">
+            <li>Connector-Agnostic</li>
+            <li>Scalable Queues</li>
+            <li>Idempotent Processing</li>
+            <li>Resilience & Backpressure</li>
+            <li>Observability</li>
+            <li>Go</li>
+            <li>PostgreSQL</li>
+            <li>Cloud-Native Deployment</li>
+          </ul>
+
+          <div class="actions">
+            <a
+              class="btn primary"
+              href="https://www.stacksync.com/blog/building-a-resilient-real-time-data-sync-architecture-implementation-guide-for-technical-leaders"
+              target="_blank"
+              rel="noopener"
+              >Resilient Sync Guide</a
+            >
+            <a
+              class="btn"
+              href="https://cloud.google.com/pubsub/docs/overview"
+              target="_blank"
+              rel="noopener"
+              >Pub/Sub Docs</a
+            >
+          </div>
+        </article>
+
+        <!-- Card -->
+        <article class="pcard" data-status="in-progress">
+          <div class="rail"></div>
+          <header class="phead">
+            <h2 class="ptitle">Workflow Builder</h2>
+            <span class="badge progress">In&nbsp;Progress</span>
+          </header>
+          <p class="pdesc">
+            Drag-and-drop orchestration of intake, verification, and document
+            steps with mapping to target systems. Deterministic state
+            transitions, auditability, and background workers.
+          </p>
+          <ul class="chips">
+            <li>React</li>
+            <li>Go</li>
+            <li>React Flow</li>
+            <li>Workflow Orchestration</li>
+            <li>Temporal</li>
+            <li>Google Vertex AI</li>
+            <li>OCR</li>
+            <li>Cloud Storage</li>
+          </ul>
+          <nav class="actions">
+            <a
+              class="btn primary"
+              href="https://temporal.io"
+              target="_blank"
+              rel="noopener"
+              >Workflow Orchestration</a
+            >
+            <a
+              class="btn"
+              href="https://reactflow.dev/examples/"
+              target="_blank"
+              rel="noopener"
+              >Visual Builders</a
+            >
+          </nav>
+        </article>
+
+        <!-- Card -->
+        <article class="pcard" data-status="planned">
+          <div class="rail"></div>
+          <header class="phead">
+            <h2 class="ptitle">PDF Verification Pipeline</h2>
+            <span class="badge planned">Planned</span>
+          </header>
+          <p class="pdesc">
+            OCR + LLM assisted extraction and rule-based validation for form
+            based PDFs, with human-in-the-loop review.
+          </p>
+          <ul class="chips">
+            <li>React</li>
+            <li>Go</li>
+            <li>Google Vertex AI</li>
+            <li>Google Document AI</li>
+            <li>OCR</li>
+            <li>Cloud Storage</li>
+          </ul>
+          <nav class="actions">
+            <a
+              class="btn primary"
+              href="https://cloud.google.com/document-ai"
+              target="_blank"
+              rel="noopener"
+              >Document AI</a
+            >
+            <a
+              class="btn"
+              href="https://cloud.google.com/vertex-ai"
+              target="_blank"
+              rel="noopener"
+              >Vertex AI</a
+            >
+          </nav>
+        </article>
+      </section>
+    </main>
+
+    <script>
+      // Optional filter behavior
+      const list = document.getElementById("projectList");
+      const btns = document.querySelectorAll(".filter-btn");
+
+      btns.forEach((b) =>
+        b.addEventListener("click", () => {
+          btns.forEach((x) => x.classList.remove("active"));
+          b.classList.add("active");
+          const f = b.dataset.filter;
+          list.querySelectorAll(".pcard").forEach((card) => {
+            const status = card.getAttribute("data-status");
+            card.hidden = !(f === "all" || f === status);
+          });
+        })
+      );
+    </script>
   </body>
 </html>
