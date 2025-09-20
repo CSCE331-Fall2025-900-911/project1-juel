@@ -514,3 +514,70 @@ body {
   color: #c3cedc;
   line-height: 1.55;
 }
+
+/* Service / Community Impact */
+.svc-hero h1 {
+  margin: 0 0 6px;
+  font-size: 36px;
+  color: var(--text);
+}
+.svc-cta {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin: 10px 0 20px;
+}
+
+.svc-section {
+  margin: 26px 0 8px;
+}
+.svc-header h2 {
+  margin: 0 0 6px;
+  font-size: 24px;
+  color: var(--text);
+}
+.svc-header p {
+  margin: 0 0 10px;
+  color: #c0cadd;
+  max-width: 760px;
+}
+
+.svc-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 16px;
+}
+
+.svc-card {
+  background: var(--panel-2);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 16px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transition: transform 0.18s ease, border-color 0.18s ease;
+}
+.svc-card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(255, 255, 255, 0.12);
+}
+
+.svc-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.meta-title {
+  font-size: 14px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.svc-desc {
+  margin: 0;
+  color: #c0cadd;
+  line-height: 1.6;
+}
