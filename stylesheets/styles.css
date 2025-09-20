@@ -123,24 +123,87 @@ body {
   margin-top: auto;
 }
 
-.dl-btn {
+/* Theme Toggle Switch */
+.theme-toggle {
+  position: relative;
   width: 64px;
-  height: 64px;
-  border-radius: 18px;
-  border: 1px dashed rgba(0, 194, 255, 0.35);
-  background: transparent;
-  display: grid;
-  place-items: center;
+  height: 34px;
+  display: inline-block;
+}
+.theme-toggle input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.slider {
+  position: absolute;
   cursor: pointer;
-  transition: 0.2s ease;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #222;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 34px;
+  transition: 0.3s;
 }
-.dl-btn svg {
-  width: 28px;
-  height: 28px;
-  fill: var(--accent);
+.slider::before {
+  content: "";
+  position: absolute;
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 3px;
+  background: var(--accent);
+  border-radius: 50%;
+  transition: 0.3s;
 }
-.dl-btn:hover {
-  transform: translateY(-2px) scale(1.02);
+input:checked + .slider {
+  background: #ddd;
+}
+input:checked + .slider::before {
+  transform: translateX(28px);
+  background: #333;
+}
+
+/* Tooltip for theme toggle */
+.theme-toggle {
+  position: relative;
+  width: 64px;
+  height: 34px;
+  display: inline-block;
+}
+
+.theme-toggle .tooltip {
+  position: absolute;
+  bottom: 120%; /* above the switch */
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(15, 17, 21, 0.9);
+  color: #e8ecf1;
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 12px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.theme-toggle .tooltip::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 6px;
+  border-style: solid;
+  border-color: rgba(15, 17, 21, 0.9) transparent transparent transparent;
+}
+
+.theme-toggle:hover .tooltip {
+  opacity: 1;
+  transform: translateX(-50%) translateY(-4px);
 }
 
 /* HERO */
