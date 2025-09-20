@@ -376,6 +376,8 @@ body {
   background: var(--panel-2);
   border: 1px solid var(--border);
   border-radius: var(--radius);
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
   box-shadow: var(--shadow);
   padding: 16px 18px 14px 18px;
   display: flex;
@@ -446,4 +448,69 @@ body {
 
 .pcard[hidden] {
   display: none !important;
+}
+
+/* Qualifications Layout */
+.qual-layout {
+  display: grid;
+  grid-template-columns: 30vw 1fr;
+  gap: 28px;
+  align-items: start;
+}
+
+.resume-pane {
+  background: var(--panel-2);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 16px;
+}
+.resume-pane h2 {
+  margin-top: 0;
+  color: var(--text);
+}
+.resume-pane p {
+  color: #c0cadd;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.resume-embed {
+  margin-top: 12px;
+  overflow: hidden;
+  border-width: 0px;
+}
+
+.resume-embed iframe {
+  border-width: 0px;
+}
+
+.qual-content {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.skills-section p,
+.interests-section p {
+  color: #c0cadd;
+  max-width: 720px;
+}
+
+.interest {
+  margin-top: 18px;
+  padding: 14px 16px;
+  background: var(--panel-2);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+.interest h3 {
+  margin: 0 0 6px;
+  color: var(--text);
+}
+.interest p {
+  margin: 0;
+  color: #c3cedc;
+  line-height: 1.55;
 }

@@ -39,7 +39,7 @@
           <!-- certificate/ribbon -->
           <svg viewBox="0 0 24 24" aria-hidden="true">
             <path
-              d="M12 2a7 7 0 1 1-4.9 11.9l-2.5.8a1 1 0 0 1-1.26-1.26l.8-2.5A7 7 0 0 1 12 2Zm0 3a4 4 0 1 0 0 8 4 4 0 0 0 0-8Zm-2.2 12.2 1.7-.57a2 2 0 0 1 1.02 0l1.68.56a1 1 0 0 0 .81-.08l2.49-1.33a.5.5 0 0 1 .74.44l-.07 2.82a1 1 0 0 1-.5.86l-2.38 1.37a1 1 0 0 1-1.02 0l-1.23-.71a1 1 0 0 0-.98 0l-1.23.71a1 1 0 0 1-1.02 0l-2.38-1.37a1 1 0 0 1-.5-.86l-.07-2.82a.5.5 0 0 1 .74-.44l2.49 1.33a1 1 0 0 0 .81.08Z"
+              d="M11.25 9.541l-2.25-2.182.929-.929 1.321 1.253 2.821-2.892.929.93-3.75 3.82zm7.676-3.819c-.482 1.41-.484 1.139 0 2.555.05.147.074.297.074.445 0 .449-.222.883-.615 1.156-1.256.87-1.09.651-1.562 2.067-.198.591-.77.99-1.415.99h-.003c-1.549-.005-1.28-.088-2.528.789-.262.184-.569.276-.877.276s-.615-.092-.876-.275c-1.249-.878-.98-.794-2.528-.789h-.004c-.645 0-1.216-.399-1.413-.99-.473-1.417-.311-1.198-1.562-2.067-.395-.274-.617-.708-.617-1.157 0-.148.024-.298.074-.444.483-1.411.484-1.139 0-2.555-.05-.147-.074-.297-.074-.445 0-.45.222-.883.616-1.157 1.251-.868 1.089-.648 1.562-2.067.197-.591.769-.99 1.413-.99h.004c1.545.005 1.271.095 2.528-.79.262-.183.569-.274.877-.274s.615.091.876.274c1.248.878.98.795 2.528.79h.003c.646 0 1.217.399 1.415.99.473 1.416.307 1.197 1.562 2.067.394.273.616.707.616 1.156 0 .148-.024.299-.074.445zm-2.176 1.278c0-2.623-2.127-4.75-4.75-4.75s-4.75 2.127-4.75 4.75 2.127 4.75 4.75 4.75 4.75-2.128 4.75-4.75zm-7.385 7.931c-.766 0-1.371-.074-1.873-.213-.308 3.068-1.359 5.37-3.492 7.592.854.107 1.95-.094 2.833-.56.317.636.65 1.43.767 2.25 2.009-2.299 3.266-5.054 3.734-8.071-.943-.181-1.234-.496-1.969-.998zm5.27 0c-.737.507-1.043.82-1.968.998.47 3.017 1.726 5.772 3.733 8.071.116-.82.449-1.614.767-2.25.883.465 1.979.667 2.833.56-2.13-2.219-3.168-4.531-3.479-7.595-.503.141-1.112.216-1.886.216z"
             />
           </svg>
         </a>
@@ -65,13 +65,103 @@
         </button>
       </div>
     </aside>
-    <center>
-      <h1>
-        <font color="#990000"
-          >Under Construction, this page will service as my qualifications page
-          pending final designs</font
-        >
-      </h1>
-    </center>
+
+    <main class="content qualifications-page">
+      <header class="qual-header">
+        <h1>Qualifications</h1>
+        <p>
+          A summary of my background, technical skills, and areas of academic
+          and professional interest.
+        </p>
+      </header>
+
+      <div class="qual-layout">
+        <!-- Left: Resume -->
+        <aside class="resume-pane">
+          <h2>Resume</h2>
+          <p>
+            View or download my full resume below.
+            <a
+              class="textlink"
+              href="https://drive.google.com/file/d/1s9PuboeH6qycA31AzVwVBr5DS0PQf6uc/view?usp=sharing"
+              target="_blank"
+              rel="noopener"
+              >Open in Google Drive</a
+            >.
+          </p>
+          <div class="resume-embed">
+            <iframe
+              src="https://drive.google.com/file/d/1s9PuboeH6qycA31AzVwVBr5DS0PQf6uc/preview"
+              width="100%"
+              height="500"
+              allow="autoplay"
+            ></iframe>
+          </div>
+        </aside>
+
+        <!-- Right: Content -->
+        <section class="qual-content">
+          <!-- Technical Skills -->
+          <section class="skills-section">
+            <h2>Technical Skills</h2>
+            <p>
+              My technical background spans multiple layers of modern software
+              development, from system design to implementation and operations.
+              I focus on building systems that are secure, scalable, and
+              maintainable.
+            </p>
+
+            <ul class="chips">
+              <li>Go</li>
+              <li>TypeScript</li>
+              <li>Next.js / React</li>
+              <li>NestJS</li>
+              <li>PostgreSQL</li>
+              <li>Drizzle ORM</li>
+              <li>Cloud-Native Deployment</li>
+              <li>Event-Driven Architecture</li>
+              <li>RBAC & Authorization</li>
+              <li>Observability</li>
+              <li>AWS</li>
+              <li>GCP</li>
+              <li>Kubernetes</li>
+            </ul>
+          </section>
+
+          <!-- Areas of Interest -->
+          <section class="interests-section">
+            <h2>Technical Areas of Interest</h2>
+            <p>
+              Beyond my day-to-day skills, I am especially interested in the
+              following areas of computer science and software engineering. Each
+              reflects my drive to work on systems that are not only functional,
+              but also resilient, ethical, and impactful.
+            </p>
+
+            <article class="interest">
+              <h3>Cloud Architecture</h3>
+              <p>
+                I am excited by the flexibility of cloud-native platforms and
+                how they enable rapid development and elastic scaling. My focus
+                is on designing architectures that balance cost-efficiency with
+                performance, while maintaining simplicity and observability for
+                the teams that operate them.
+              </p>
+            </article>
+
+            <article class="interest">
+              <h3>Compliance & Secure Systems</h3>
+              <p>
+                Having worked on projects requiring strict access control and
+                auditability, I value building systems that embed compliance
+                requirements into their core. I see security and compliance not
+                as constraints, but as essential features that enable trust and
+                long-term adoption.
+              </p>
+            </article>
+          </section>
+        </section>
+      </div>
+    </main>
   </body>
 </html>
