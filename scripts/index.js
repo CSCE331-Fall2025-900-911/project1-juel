@@ -2,16 +2,12 @@ const switcher = document.getElementById("themeSwitch");
 const stylesheet = document.getElementById("themeStylesheet");
 
 switcher.addEventListener("change", () => {
-  if (switcher.checked) {
-    stylesheet.setAttribute("href", "stylesheets/light.css");
-  } else {
-    stylesheet.setAttribute("href", "stylesheets/dark.css");
-  }
-
-  localStorage.setItem(
-    "theme",
-    switcher.checked ? "stylesheets/light.css" : "stylesheets/dark.css"
-  );
+  const themeFile = switcher.checked
+    ? "stylesheets/light.css"
+    : "stylesheets/dark.css";
+  stylesheet.setAttribute("href", themeFile);
+  localStorage.setItem("theme", themeFile);
+  console.log("SWITCHED");
 });
 
 window.onload = function () {
@@ -19,5 +15,6 @@ window.onload = function () {
   console.log(savedTheme);
   if (savedTheme !== null) {
     stylesheet.setAttribute("href", savedTheme);
+    switcher.checked = savedTheme.includes("light.css");
   }
 };

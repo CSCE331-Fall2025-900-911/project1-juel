@@ -247,6 +247,10 @@ body {
   gap: 10px 12px;
 }
 
+.hero-actions .links {
+  margin-top: 10px;
+}
+
 .btn {
   display: inline-flex;
   align-items: center;
@@ -358,6 +362,10 @@ body {
   flex-wrap: wrap;
 }
 
+.portfolio-page {
+  margin-top: 0px;
+}
+
 .portfolio-header h1 {
   color: #0f1426;
   font-size: 34px;
@@ -456,4 +464,12 @@ body {
 .pdesc {
   color: var(--muted);
   line-height: 1.55;
+}
+
+.qualifications-page {
+  margin-top: 0px;
+}
+
+.service-page {
+  margin-top: 0px;
 }
