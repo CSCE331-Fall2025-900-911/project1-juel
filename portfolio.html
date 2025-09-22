@@ -94,11 +94,88 @@
 
       <section class="project-list" id="projectList">
         <!-- Card -->
+        <article class="pcard" data-status="planned">
+          <div class="rail"></div>
+          <header class="phead">
+            <h2 class="ptitle">PDF Verification Pipeline</h2>
+            <span class="badge planned">Planned · 2025</span>
+          </header>
+          <p class="pdesc">
+            OCR + LLM assisted extraction and rule-based validation for form
+            based PDFs, with human-in-the-loop review.
+          </p>
+          <ul class="chips">
+            <li>React</li>
+            <li>Go</li>
+            <li>Google Vertex AI</li>
+            <li>Google Document AI</li>
+            <li>OCR</li>
+            <li>Cloud Storage</li>
+          </ul>
+          <nav class="actions">
+            <a
+              class="btn"
+              href="https://cloud.google.com/document-ai"
+              target="_blank"
+              rel="noopener"
+              >Document AI</a
+            >
+            <a
+              class="btn"
+              href="https://cloud.google.com/vertex-ai"
+              target="_blank"
+              rel="noopener"
+              >Vertex AI</a
+            >
+          </nav>
+        </article>
+
+        <!-- Card -->
+        <article class="pcard" data-status="in-progress">
+          <div class="rail"></div>
+          <header class="phead">
+            <h2 class="ptitle">Workflow Builder</h2>
+            <span class="badge progress">In&nbsp;Progress · 2025</span>
+          </header>
+          <p class="pdesc">
+            Drag-and-drop orchestration of intake, verification, and document
+            steps with mapping to target systems. Deterministic state
+            transitions, auditability, and background workers.
+          </p>
+          <ul class="chips">
+            <li>React</li>
+            <li>Go</li>
+            <li>React Flow</li>
+            <li>Workflow Orchestration</li>
+            <li>Temporal</li>
+            <li>Google Vertex AI</li>
+            <li>OCR</li>
+            <li>Cloud Storage</li>
+          </ul>
+          <nav class="actions">
+            <a
+              class="btn primary"
+              href="https://temporal.io"
+              target="_blank"
+              rel="noopener"
+              >Workflow Orchestration</a
+            >
+            <a
+              class="btn"
+              href="https://reactflow.dev/examples/"
+              target="_blank"
+              rel="noopener"
+              >Visual Builders</a
+            >
+          </nav>
+        </article>
+
+        <!-- Card -->
         <article class="pcard" data-status="completed">
           <div class="rail"></div>
           <header class="phead">
             <h2 class="ptitle">Modular Data Sync Engine</h2>
-            <span class="badge completed">Completed</span>
+            <span class="badge completed">Completed · 2025</span>
           </header>
 
           <p class="pdesc">
@@ -139,80 +216,94 @@
         </article>
 
         <!-- Card -->
-        <article class="pcard" data-status="in-progress">
+        <article class="pcard" data-status="completed">
           <div class="rail"></div>
           <header class="phead">
-            <h2 class="ptitle">Workflow Builder</h2>
-            <span class="badge progress">In&nbsp;Progress</span>
+            <h2 class="ptitle">National Vaccine Distribution System</h2>
+            <span class="badge completed">Completed · 2021</span>
           </header>
+
           <p class="pdesc">
-            Drag-and-drop orchestration of intake, verification, and document
-            steps with mapping to target systems. Deterministic state
-            transitions, auditability, and background workers.
+            Partnered with the
+            <strong>Tobago Regional Health Authority</strong> to design and
+            develop a PHP/MySQL system that streamlined vaccine distribution and
+            appointment scheduling. The platform integrated the
+            <strong>Google Maps Places Autocomplete API</strong>, geographically
+            constrained to the country, improving user-friendliness and ensuring
+            accurate clinic selection. Built with scalability in mind, the
+            system was designed to efficiently digitalize the nation’s
+            immunization process and serve as a foundation for broader
+            healthcare modernization.
           </p>
+
           <ul class="chips">
-            <li>React</li>
-            <li>Go</li>
-            <li>React Flow</li>
-            <li>Workflow Orchestration</li>
-            <li>Temporal</li>
-            <li>Google Vertex AI</li>
-            <li>OCR</li>
-            <li>Cloud Storage</li>
+            <li>PHP</li>
+            <li>MySQL</li>
+            <li>Google Maps API</li>
+            <li>Places Autocomplete</li>
+            <li>Public Health</li>
+            <li>Digital Transformation</li>
+            <li>Collaborative Development</li>
           </ul>
-          <nav class="actions">
-            <a
-              class="btn primary"
-              href="https://temporal.io"
-              target="_blank"
-              rel="noopener"
-              >Workflow Orchestration</a
-            >
+
+          <div class="actions">
             <a
               class="btn"
-              href="https://reactflow.dev/examples/"
+              href="https://developers.google.com/maps/documentation/places/web-service/autocomplete"
               target="_blank"
               rel="noopener"
-              >Visual Builders</a
+              >Places Autocomplete API</a
             >
-          </nav>
+          </div>
         </article>
 
         <!-- Card -->
-        <article class="pcard" data-status="planned">
+        <article class="pcard" data-status="completed">
           <div class="rail"></div>
           <header class="phead">
-            <h2 class="ptitle">PDF Verification Pipeline</h2>
-            <span class="badge planned">Planned</span>
+            <h2 class="ptitle">Project Decipherer</h2>
+            <span class="badge completed">Completed · 2020</span>
           </header>
+
           <p class="pdesc">
-            OCR + LLM assisted extraction and rule-based validation for form
-            based PDFs, with human-in-the-loop review.
+            A Python-based desktop application developed to sort and organize
+            more than
+            <strong>600,000 land deeds</strong> at the request of a Senior
+            Counsel. The system integrates Google Cloud Storage, Vision AI, and
+            Natural Language AI to extract, classify, and index scanned
+            documents. By automating what was previously a manual process, the
+            project <strong>boosted productivity by 40%</strong> and saved the
+            firm over <strong>14,800 hours of labor</strong>, enabling staff to
+            focus on higher-value legal work.
           </p>
+
           <ul class="chips">
-            <li>React</li>
-            <li>Go</li>
-            <li>Google Vertex AI</li>
-            <li>Google Document AI</li>
+            <li>Python</li>
+            <li>Desktop Application</li>
+            <li>Google Cloud Storage</li>
+            <li>Vision AI</li>
+            <li>Natural Language AI</li>
             <li>OCR</li>
-            <li>Cloud Storage</li>
+            <li>Document Classification</li>
+            <li>Process Automation</li>
           </ul>
-          <nav class="actions">
+
+          <div class="actions">
             <a
-              class="btn primary"
-              href="https://cloud.google.com/document-ai"
+              class="btn"
+              href="https://cloud.google.com/vision"
               target="_blank"
               rel="noopener"
-              >Document AI</a
+              >Google Vision AI</a
             >
             <a
               class="btn"
-              href="https://cloud.google.com/vertex-ai"
+              href="https://cloud.google.com/natural-language"
               target="_blank"
               rel="noopener"
-              >Vertex AI</a
+              >Natural Language AI</a
             >
-          </nav>
+          </div>
         </article>
       </section>
     </main>
